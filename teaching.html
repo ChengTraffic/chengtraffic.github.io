@@ -25,7 +25,7 @@
     <!-- For all browsers -->
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
     <link rel="stylesheet" href="assets/css/academicons.css"/>
-
+    
     <style>
       button.accordion {
       font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -95,16 +95,25 @@
 	  
       <section>
 
-      <h2>Teaching Experience</h2>
-	  
-      <h3>Graduate Teaching Assistant</h3>
-		<ul>
-		  <li>Course: Modelling transportation systems (SEU, Spring 2016, Spring 2017, Spring 2018)</li>
+  <h2>Teaching Experience</h2>
+    <h3>Graduate Teaching Assistant</h3>
+        <ul>
+    	  <li>Course: Modelling transportation systems (SEU, Spring 2016, Spring 2017, Spring 2018)</li>
 		</ul>
-	  
-	  
+
       </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    <script> 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.parentNode.nextElementSibling.classList.toggle("show");
+      }
+    }
+    </script>
   </body>
 </html>

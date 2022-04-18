@@ -25,7 +25,7 @@
     <!-- For all browsers -->
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
     <link rel="stylesheet" href="assets/css/academicons.css"/>
-
+    
     <style>
       button.accordion {
       font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -94,22 +94,32 @@
       </header>
 	  
       <section>
-	  
-    <h2>Honors and Awards</h2>
-      <ul>
-        <li>Outstanding Submittal Award of “TRB 2017 Transportation Data Analytics Contest”, Awarded by TRB Effects of Information and Communication Technologies on Travel Choices Committee, 2017</li>
-		<li>Best Paper Award of the 2nd Transportation Research Congress, 2017</li>
-      </ul>
-	<hr>
-	
-    <h2>Research Grants</h2>
-      <ul>
-        <li>Graduate Scientific Research Innovation Project of Jiangsu Province. Principal Investigator. Project Title: Day-to-day Dynamic Flow Evolution Process for Multimodal Transport Network, Grant No.: KYCX17_0142, 04/2017-12/2022. Award Amount: RMB ¥30k.</li>
-		<li>Scientific Research Foundation of Graduate School of Southeast University. Principal Investigator. Project Title: Dynamic traffic assignment and its application in urban congestion pricing, Grant No.: YBPY1885, 10/2018-12/2020. Award Amount: RMB ¥42k.</li>
-      </ul>
 
+  <h2>Honors and Awards</h2>
+        <ul>
+    	  <li>Outstanding Submittal Award of “TRB 2017 Transportation Data Analytics Contest”, Awarded by TRB Effects of Information and Communication Technologies on Travel Choices Committee, 2017</li>
+		  <li>Best Paper Award of the 2nd Transportation Research Congress, 2017</li>
+		</ul>
+    <hr>
+
+  <h2>Research Grants</h2>
+        <ul>
+		  <li>Graduate Scientific Research Innovation Project of Jiangsu Province. Principal Investigator. Project Title: Day-to-day Dynamic Flow Evolution Process for Multimodal Transport Network, Grant No.: KYCX17_0142, 04/2017-12/2022. Award Amount: RMB ¥30k.</li>
+	      <li>Scientific Research Foundation of Graduate School of Southeast University. Principal Investigator. Project Title: Dynamic traffic assignment and its application in urban congestion pricing, Grant No.: YBPY1885, 10/2018-12/2020. Award Amount: RMB ¥42k.</li>
+		</ul>
       </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    <script> 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.parentNode.nextElementSibling.classList.toggle("show");
+      }
+    }
+    </script>
   </body>
 </html>
