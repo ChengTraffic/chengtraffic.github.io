@@ -1,146 +1,88 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Qixiu Cheng's Homepage</title>
-
+    <title>Research — Qixiu Cheng</title>
+    <meta name="description" content="Research interests and selected journal publications of Qixiu Cheng, covering traffic flow theory, transportation network optimization, and AI in transportation.">
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-29643011-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <!-- For all browsers -->
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.css"/>
-    
-    <style>
-      button.accordion {
-      font:16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color: #f8f8f8;
-      }
-      button.accordion.active, button.accordion:hover {
-      background-color: #f8f8f8;
-      }
-      button.accordion:after {
-      content: " [+] ";
-      font-size: 90%;
-      color:#777;
-      float: left;
-      margin-left: 1px;
-      }
-
-      button.accordion.active:after {
-      content: " [\2212] ";
-      }
-      div.panel {
-      padding: 0 20px;
-      margin-top: 5px;
-      display: none;
-      background-color: white;
-      font-size: 100%;
-      }
-      div.panel.show {
-      display: block !important;
-      }
-      .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-    </style>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1>Qixiu Cheng</h1>
         <p>Senior Lecturer in AI and Data Analytics<br>University of Bristol Business School<br>University of Bristol, Bristol, UK</p>
-		<h3><a href="https://chengtraffic.github.io/">Home</a></h3>
-        <h3><a href="https://chengtraffic.github.io/research.html">Research</a></h3>
-		<h3><a href="https://chengtraffic.github.io/teaching.html">Teaching</a></h3>
-		<h3><a href="https://chengtraffic.github.io/service.html">Service</a></h3>
-		<h3><a href="https://chengtraffic.github.io/award.html">Award</a></h3>
-		<h3><a href="https://chengtraffic.github.io/team.html">Team</a></h3>
-        
-    <b>Social</b><br>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/research.html" class="active">Research</a></li>
+            <li><a href="/teaching.html">Teaching</a></li>
+            <li><a href="/service.html">Service</a></li>
+            <li><a href="/award.html">Award</a></li>
+            <li><a href="/team.html">Team</a></li>
+          </ul>
+        </nav>
+        <b>Social</b><br>
         <div class="social-row">
-          <a href="https://scholar.google.com/citations?hl=en&user=lq31WdEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
-          <a href="https://orcid.org/0000-0001-8772-7584"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a><br>
-          <a href="https://www.researchgate.net/profile/Qixiu-Cheng" class="author-social" target="_blank"><i class="ai ai-fw ai-researchgate-square"></i> ResearchGate</a><br>
-          <br>
+          <a href="https://scholar.google.com/citations?hl=en&user=lq31WdEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a>
+          <a href="https://orcid.org/0000-0001-8772-7584" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a>
+          <a href="https://www.researchgate.net/profile/Qixiu-Cheng" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-researchgate-square"></i> ResearchGate</a>
         </div>
-
-    <p><b>Contact:</b><br>Rm 2.06, 11-13 Tyndalls Park Road<br>Bristol BS8 1PY, UK<br>Email: qixiu[dot]kevin[dot]cheng[at]gmail[dot]com<br>qixiu[dot]cheng[at]bristol[dot]ac[dot]uk</p>
+        <p><b>Contact:</b><br>Rm 2.06, 11-13 Tyndalls Park Road<br>Bristol BS8 1PY, UK<br>Email: qixiu[dot]cheng[at]bristol[dot]ac[dot]uk<br>qixiu[dot]kevin[dot]cheng[at]gmail[dot]com</p>
+        <div class="visitor-counter">
+          <span id="visitor-count">Loading visitor count...</span>
+        </div>
       </header>
-	  
+
       <section>
-
-  <h2><a id="research-interests" class="anchor" href="#researchinterests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research Interests</h2>
-    <h3>Traffic Flow Theory</h3>
-	<h3>Transportation Network Optimization</h3>
-    <h3>AI Algorithms in Transportation</h3>
-
-    <hr>
-
-    <h2><a id="selected-journal-publications" class="anchor" href="#selectedjournalpublications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selected Journal Publications</h2>
+        <h2><a id="research-interests" class="anchor" href="#researchinterests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research Interests</h2>
         <ul>
-		  <li>Wang, Z., Lin, Y., Liu, Z., Dong, Y., Zheng, Y., Liu, P., & <strong>Cheng, Q.</strong> (2026). Traffic dynamics modeling with an extended S3 car following model. <strong>Transportation Research Part C</strong>, 183, 105494. <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0968090X2500498X/pdf"><em>[URL]</em></a></li>
-		  <li>Zhou, Y., <strong>Cheng, Q.</strong>, Zhang, C., Luo, M., & Liu, Z. (2026). Stochastic Fundamental Diagram Modeling Using Asymmetric Vine and Nested Archimedean Copulas. <strong>Transportation Research Part B</strong>, 203, 103350. <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0191261525001997/pdf"><em>[URL]</em></a></li>
-		  <li>Hong, K., Wu, Y., Xin, Y., <strong>Cheng, Q.</strong>, Huang, K., & Liu, Z. (2025). Corner Case Detection in Autonomous Driving with Deep Learning. Accepted by <strong>IEEE Transactions on Vehicular Technology</strong></li>
-		  <li>Wang, Z., <strong>Cheng, Q.</strong>, Gu., Z., Liu, C., Cun, D., Shi, X., Wu, X., Zhou, Z., He, X., Vlacic, L., & Liu, Z. (2025). Analyzing mega-mobility systems in smart cities: A macro-micro integration with feedback paradigm empowered by artificial intelligence. <strong>Research</strong>, 9, 0982. <a target="_blank" href="https://spj.science.org/doi/pdf/10.34133/research.0982"><em>[URL]</em></a></li>
-		  <li>Shao, F., Shao, H., Wu, X., <strong>Cheng, Q.</strong>, & Lam, W.H.K. (2025). A Physics-Informed Machine Learning Framework for Speed-Flow Prediction: Integrating an S-Shaped Traffic Stream Model with Deep Learning Models. <strong>Transportation Research Part C</strong>, 180, 105362. <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0968090X25003663"><em>[URL]</em></a></li>
-		  <li>Wang, Z., Liu, Z., Lin, Y., Zhang, Y., & <strong>Cheng, Q.</strong> (2025). Day-to-day traffic flow dynamics with mixed autonomy considering link-level penetration rate evolution of autonomous vehicles. Published online in <strong>Proceedings of the IEEE</strong>. <a target="_blank" href="https://ieeexplore.ieee.org/document/11077689"><em>[URL]</em></a></li>
-		  <li><strong>Cheng, Q.</strong>, Hong, K., Huang, K., & Liu, Z. (2025). Evaluating effectiveness and identifying appropriate methods for anomaly detection in intelligent transportation systems. <strong>IEEE Transactions on Intelligent Transportation Systems</strong>, 26(8), 11442-11453. <a target="_blank" href="https://ieeexplore.ieee.org/document/11059993"><em>[URL]</em></a></li>
-		  <li><strong>Cheng, Q.</strong>, Zhang, Y., Gu, Z., Wang, Z., Liu, H., Lin, Y., & Liu, Z. (2025). A hybrid physics-based and data-driven approach for car-following behavior modeling and analysis. <strong>Transportation Research Part C</strong>, 177, 105207. <a target="_blank" href="https://doi.org/10.1016/j.trc.2025.105207"><em>[URL]</em></a></li>
-		  <li><strong>Cheng, Q.</strong>, Song, Q., Wang, Z., Lin, Y., & Liu, Z. (2025). Capturing traffic flow state variation process: An analytical modeling approach. <strong>Transportation Research Part E</strong>, 198, 104119. <a target="_blank" href="https://doi.org/10.1016/j.tre.2025.104119"><em>[URL]</em></a></li>
-		  <li><strong>Cheng, Q.</strong>, Dai, G., Ru, B., Liu, Z., Ma, W., Liu, H., & Gu, Z. (2025). Traffic flow outlier detection for smart mobility using Gaussian process regression assisted stochastic differential equations. <strong>Transportation Research Part E</strong>, 193, 103840. <a target="_blank" href="https://doi.org/10.1016/j.tre.2024.103840"><em>[URL]</em></a></li>
-		  <li>Wang, Z., <strong>Cheng, Q.</strong>, Liu, P., Yu, W., Wang, J., & Liu, Z. (2025). Energy and environmental implications of automated vehicles under mixed autonomy traffic environment. <strong>IEEE Transactions on Intelligent Vehicles</strong>, 10(2), 1226-1240. <a target="_blank" href="https://doi.org/10.1109/TIV.2024.3425532"><em>[URL]</em></a></li>
-		  <li>Yang, X., Liu, Z., <strong>Cheng, Q.</strong>, & Liu, P. (2024). Geometry-aware car-following model construction: Theoretical modeling and empirical analysis on horizontal curves. <strong>Transportation Research Part C</strong>, 166, 104772. <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0968090X24002936/pdf"><em>[URL]</em></a></li>
-		  <li><strong>Cheng, Q.</strong>, Liu, Z., Lu, J., List, G., Liu, P., & Zhou, X. (2024). Using frequency domain analysis to elucidate travel time reliability along congested freeway corridors. <strong>Transportation Research Part B</strong>, 184, 102961. <a target="_blank" href="https://doi.org/10.1016/j.trb.2024.102961"><em>[URL]</em></a></li>
-		  <li>Wang, Z., Liu, Z., <strong>Cheng, Q.</strong>, & Gu, Z. (2024). Integrated self-consistent macro-micro traffic flow modelling and calibration framework based on trajectory data. <strong>Transportation Research Part C</strong>, 158, 104439. <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0968090X23004291/pdf"><em>[URL]</em></a></li>
-		  <li><strong>Cheng, Q.</strong>, Lin, Y., Zhou, X., & Liu, Z. (2024). Analytical formulation for explaining the variation of traffic states: A fundamental diagram modeling perspective with stochastic parameters. <strong>European Journal of Operational Research</strong>, 312(1), 182-197. <a target="_blank" href="https://doi.org/10.1016/j.ejor.2023.07.005"><em>[URL]</em></a></li>
-		  <li>Huo, J., Liu, Z., Chen, J., <strong>Cheng, Q.</strong>, & Meng, Q. (2023). Bayesian optimization for congestion pricing problems: A general framework and its instability. <strong>Transportation Research Part B</strong>, 169, 1-28. <a target="_blank" href="https://www.sciencedirect.com/science/article/abs/pii/S0191261523000036"><em>[URL]</em></a></li>
-		  <li><strong>Cheng, Q.</strong>, Liu, Z., Guo, J., Wu, X., Pendyala, R., Belezamo, B., & Zhou, X. (2022). Estimating key traffic state parameters through parsimonious spatial queue models. <strong>Transportation Research Part C</strong>, 137, 103596. <a target="_blank" href="https://www.researchgate.net/profile/Qixiu-Cheng/publication/358600679_Estimating_key_traffic_state_parameters_through_parsimonious_spatial_queue_models/links/622c2e30a39db062db95e4cb/Estimating-key-traffic-state-parameters-through-parsimonious-spatial-queue-models.pdf"><em>[URL]</em></a></li>
-		  <li>Liu, Z., Wang, Y., <strong>Cheng, Q.</strong>, & Yang, H. (2022). Analysis of the information entropy on traffic flows. <strong>IEEE Transactions on Intelligent Transportation Systems</strong>, 23(10), 18012-18023. <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/9733969"><em>[URL]</em></a></li>
-		  <li><strong>Cheng, Q.</strong>, Liu, Z., Lin, Y., & Zhou, X. (2021). An s-shaped three-parameter (S3) traffic stream model with consistent car following relationship. <strong>Transportation Research Part B</strong>, 153, 246-271. <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0191261521001715"><em>[URL]</em></a></li>
-		  <li>Liu, Z., Wang, Z, <strong>Cheng, Q.</strong>, Yin, R., & Wang, M. (2021). Estimation of urban network capacity with second-best constraints for multimodal transport systems. <strong>Transportation Research Part B</strong>, 152, 276-294. <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0191261521001624"><em>[URL]</em></a></li>
-		  <li>An, Q., Fu, X., Huang, D., <strong>Cheng, Q.</strong>, & Liu, Z. (2020). Analysis of adding-runs strategy for peak-hour regular bus services. <strong>Transportation Research Part E</strong>, 143, 102100. <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S1366554520307493"><em>[URL]</em></a></li>
-		  <li><strong>Cheng, Q.</strong>, Wang, S., Liu, Z., & Yuan, Y. (2019). Surrogate-based simulation optimization approach for day-to-day dynamics model calibration with real data. <strong>Transportation Research Part C</strong>, 105, 422-438. <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0968090X19302013"><em>[URL]</em></a></li>
-		  <li>Liu, Z., Liu, Y., Meng, Q., & <strong>Cheng, Q.</strong> (2019). A tailored machine learning approach for urban transport network flow estimation. <strong>Transportation Research Part C</strong>, 108, 130-150. <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0968090X18317650"><em>[URL]</em></a></li>
-		  <li>Liu, Z., Wang, S., Zhou, B., & <strong>Cheng, Q.</strong> (2017). Robust optimization of distance-based tolls in a network considering stochastic day to day dynamics. <strong>Transportation Research Part C</strong>, 79, 58-72. <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0968090X17300943"><em>[URL]</em></a></li>
-		</ul>
+          <li>Traffic Flow Theory</li>
+          <li>Transportation Network Optimization</li>
+          <li>AI Algorithms in Transportation</li>
+        </ul>
+
+        <hr>
+
+        <h2><a id="selected-journal-publications" class="anchor" href="#selectedjournalpublications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selected Journal Publications</h2>
+        <ul>
+          <li>Wang, Z., Lin, Y., Liu, Z., Dong, Y., Zheng, Y., Liu, P., &amp; <strong>Cheng, Q.</strong> (2026). Traffic dynamics modeling with an extended S3 car following model. <strong>Transportation Research Part C</strong>, 183, 105494. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/pii/S0968090X2500498X/pdf"><em>[URL]</em></a></li>
+          <li>Zhou, Y., <strong>Cheng, Q.</strong>, Zhang, C., Luo, M., &amp; Liu, Z. (2026). Stochastic Fundamental Diagram Modeling Using Asymmetric Vine and Nested Archimedean Copulas. <strong>Transportation Research Part B</strong>, 203, 103350. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/pii/S0191261525001997/pdf"><em>[URL]</em></a></li>
+          <li>Hong, K., Wu, Y., Xin, Y., <strong>Cheng, Q.</strong>, Huang, K., &amp; Liu, Z. (2025). Corner Case Detection in Autonomous Driving with Deep Learning. Accepted by <strong>IEEE Transactions on Vehicular Technology</strong></li>
+          <li>Wang, Z., <strong>Cheng, Q.</strong>, Gu, Z., Liu, C., Cun, D., Shi, X., Wu, X., Zhou, Z., He, X., Vlacic, L., &amp; Liu, Z. (2025). Analyzing mega-mobility systems in smart cities: A macro-micro integration with feedback paradigm empowered by artificial intelligence. <strong>Research</strong>, 9, 0982. <a target="_blank" rel="noopener noreferrer" href="https://spj.science.org/doi/pdf/10.34133/research.0982"><em>[URL]</em></a></li>
+          <li>Shao, F., Shao, H., Wu, X., <strong>Cheng, Q.</strong>, &amp; Lam, W.H.K. (2025). A Physics-Informed Machine Learning Framework for Speed-Flow Prediction: Integrating an S-Shaped Traffic Stream Model with Deep Learning Models. <strong>Transportation Research Part C</strong>, 180, 105362. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/pii/S0968090X25003663"><em>[URL]</em></a></li>
+          <li>Wang, Z., Liu, Z., Lin, Y., Zhang, Y., &amp; <strong>Cheng, Q.</strong> (2025). Day-to-day traffic flow dynamics with mixed autonomy considering link-level penetration rate evolution of autonomous vehicles. Published online in <strong>Proceedings of the IEEE</strong>. <a target="_blank" rel="noopener noreferrer" href="https://ieeexplore.ieee.org/document/11077689"><em>[URL]</em></a></li>
+          <li><strong>Cheng, Q.</strong>, Hong, K., Huang, K., &amp; Liu, Z. (2025). Evaluating effectiveness and identifying appropriate methods for anomaly detection in intelligent transportation systems. <strong>IEEE Transactions on Intelligent Transportation Systems</strong>, 26(8), 11442-11453. <a target="_blank" rel="noopener noreferrer" href="https://ieeexplore.ieee.org/document/11059993"><em>[URL]</em></a></li>
+          <li><strong>Cheng, Q.</strong>, Zhang, Y., Gu, Z., Wang, Z., Liu, H., Lin, Y., &amp; Liu, Z. (2025). A hybrid physics-based and data-driven approach for car-following behavior modeling and analysis. <strong>Transportation Research Part C</strong>, 177, 105207. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1016/j.trc.2025.105207"><em>[URL]</em></a></li>
+          <li><strong>Cheng, Q.</strong>, Song, Q., Wang, Z., Lin, Y., &amp; Liu, Z. (2025). Capturing traffic flow state variation process: An analytical modeling approach. <strong>Transportation Research Part E</strong>, 198, 104119. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1016/j.tre.2025.104119"><em>[URL]</em></a></li>
+          <li><strong>Cheng, Q.</strong>, Dai, G., Ru, B., Liu, Z., Ma, W., Liu, H., &amp; Gu, Z. (2025). Traffic flow outlier detection for smart mobility using Gaussian process regression assisted stochastic differential equations. <strong>Transportation Research Part E</strong>, 193, 103840. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1016/j.tre.2024.103840"><em>[URL]</em></a></li>
+          <li>Wang, Z., <strong>Cheng, Q.</strong>, Liu, P., Yu, W., Wang, J., &amp; Liu, Z. (2025). Energy and environmental implications of automated vehicles under mixed autonomy traffic environment. <strong>IEEE Transactions on Intelligent Vehicles</strong>, 10(2), 1226-1240. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/TIV.2024.3425532"><em>[URL]</em></a></li>
+          <li>Yang, X., Liu, Z., <strong>Cheng, Q.</strong>, &amp; Liu, P. (2024). Geometry-aware car-following model construction: Theoretical modeling and empirical analysis on horizontal curves. <strong>Transportation Research Part C</strong>, 166, 104772. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/pii/S0968090X24002936/pdf"><em>[URL]</em></a></li>
+          <li><strong>Cheng, Q.</strong>, Liu, Z., Lu, J., List, G., Liu, P., &amp; Zhou, X. (2024). Using frequency domain analysis to elucidate travel time reliability along congested freeway corridors. <strong>Transportation Research Part B</strong>, 184, 102961. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1016/j.trb.2024.102961"><em>[URL]</em></a></li>
+          <li>Wang, Z., Liu, Z., <strong>Cheng, Q.</strong>, &amp; Gu, Z. (2024). Integrated self-consistent macro-micro traffic flow modelling and calibration framework based on trajectory data. <strong>Transportation Research Part C</strong>, 158, 104439. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/pii/S0968090X23004291/pdf"><em>[URL]</em></a></li>
+          <li><strong>Cheng, Q.</strong>, Lin, Y., Zhou, X., &amp; Liu, Z. (2024). Analytical formulation for explaining the variation of traffic states: A fundamental diagram modeling perspective with stochastic parameters. <strong>European Journal of Operational Research</strong>, 312(1), 182-197. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1016/j.ejor.2023.07.005"><em>[URL]</em></a></li>
+          <li>Huo, J., Liu, Z., Chen, J., <strong>Cheng, Q.</strong>, &amp; Meng, Q. (2023). Bayesian optimization for congestion pricing problems: A general framework and its instability. <strong>Transportation Research Part B</strong>, 169, 1-28. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/abs/pii/S0191261523000036"><em>[URL]</em></a></li>
+          <li><strong>Cheng, Q.</strong>, Liu, Z., Guo, J., Wu, X., Pendyala, R., Belezamo, B., &amp; Zhou, X. (2022). Estimating key traffic state parameters through parsimonious spatial queue models. <strong>Transportation Research Part C</strong>, 137, 103596. <a target="_blank" rel="noopener noreferrer" href="https://www.researchgate.net/profile/Qixiu-Cheng/publication/358600679_Estimating_key_traffic_state_parameters_through_parsimonious_spatial_queue_models/links/622c2e30a39db062db95e4cb/Estimating-key-traffic-state-parameters-through-parsimonious-spatial-queue-models.pdf"><em>[URL]</em></a></li>
+          <li>Liu, Z., Wang, Y., <strong>Cheng, Q.</strong>, &amp; Yang, H. (2022). Analysis of the information entropy on traffic flows. <strong>IEEE Transactions on Intelligent Transportation Systems</strong>, 23(10), 18012-18023. <a target="_blank" rel="noopener noreferrer" href="https://ieeexplore.ieee.org/abstract/document/9733969"><em>[URL]</em></a></li>
+          <li><strong>Cheng, Q.</strong>, Liu, Z., Lin, Y., &amp; Zhou, X. (2021). An s-shaped three-parameter (S3) traffic stream model with consistent car following relationship. <strong>Transportation Research Part B</strong>, 153, 246-271. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/pii/S0191261521001715"><em>[URL]</em></a></li>
+          <li>Liu, Z., Wang, Z, <strong>Cheng, Q.</strong>, Yin, R., &amp; Wang, M. (2021). Estimation of urban network capacity with second-best constraints for multimodal transport systems. <strong>Transportation Research Part B</strong>, 152, 276-294. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/pii/S0191261521001624"><em>[URL]</em></a></li>
+          <li>An, Q., Fu, X., Huang, D., <strong>Cheng, Q.</strong>, &amp; Liu, Z. (2020). Analysis of adding-runs strategy for peak-hour regular bus services. <strong>Transportation Research Part E</strong>, 143, 102100. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/pii/S1366554520307493"><em>[URL]</em></a></li>
+          <li><strong>Cheng, Q.</strong>, Wang, S., Liu, Z., &amp; Yuan, Y. (2019). Surrogate-based simulation optimization approach for day-to-day dynamics model calibration with real data. <strong>Transportation Research Part C</strong>, 105, 422-438. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/pii/S0968090X19302013"><em>[URL]</em></a></li>
+          <li>Liu, Z., Liu, Y., Meng, Q., &amp; <strong>Cheng, Q.</strong> (2019). A tailored machine learning approach for urban transport network flow estimation. <strong>Transportation Research Part C</strong>, 108, 130-150. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/pii/S0968090X18317650"><em>[URL]</em></a></li>
+          <li>Liu, Z., Wang, S., Zhou, B., &amp; <strong>Cheng, Q.</strong> (2017). Robust optimization of distance-based tolls in a network considering stochastic day to day dynamics. <strong>Transportation Research Part C</strong>, 79, 58-72. <a target="_blank" rel="noopener noreferrer" href="https://www.sciencedirect.com/science/article/pii/S0968090X17300943"><em>[URL]</em></a></li>
+        </ul>
       </section>
     </div>
-
-
     <script src="javascripts/scale.fix.js"></script>
-    <script> 
+    <script src="javascripts/visitor-counter.js"></script>
+    <script>
     var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].onclick = function(){
-            this.classList.toggle("active");
-            this.parentNode.nextElementSibling.classList.toggle("show");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.parentNode.nextElementSibling.classList.toggle("show");
       }
     }
     </script>

@@ -1,119 +1,61 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Qixiu Cheng's Homepage</title>
-
+    <title>Team — Qixiu Cheng</title>
+    <meta name="description" content="Research team of Qixiu Cheng at the University of Bristol, including PhD students, postdocs, and visiting scholars.">
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-29643011-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <!-- For all browsers -->
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.css"/>
-    
-    <style>
-      button.accordion {
-      font:16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color: #f8f8f8;
-      }
-      button.accordion.active, button.accordion:hover {
-      background-color: #f8f8f8;
-      }
-      button.accordion:after {
-      content: " [+] ";
-      font-size: 90%;
-      color:#777;
-      float: left;
-      margin-left: 1px;
-      }
-
-      button.accordion.active:after {
-      content: " [\2212] ";
-      }
-      div.panel {
-      padding: 0 20px;
-      margin-top: 5px;
-      display: none;
-      background-color: white;
-      font-size: 100%;
-      }
-      div.panel.show {
-      display: block !important;
-      }
-      .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-    </style>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1>Qixiu Cheng</h1>
         <p>Senior Lecturer in AI and Data Analytics<br>University of Bristol Business School<br>University of Bristol, Bristol, UK</p>
-		<h3><a href="https://chengtraffic.github.io/">Home</a></h3>
-        <h3><a href="https://chengtraffic.github.io/research.html">Research</a></h3>
-		<h3><a href="https://chengtraffic.github.io/teaching.html">Teaching</a></h3>
-		<h3><a href="https://chengtraffic.github.io/service.html">Service</a></h3>
-		<h3><a href="https://chengtraffic.github.io/award.html">Award</a></h3>
-		<h3><a href="https://chengtraffic.github.io/team.html">Team</a></h3>
-        
-    <b>Social</b><br>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/research.html">Research</a></li>
+            <li><a href="/teaching.html">Teaching</a></li>
+            <li><a href="/service.html">Service</a></li>
+            <li><a href="/award.html">Award</a></li>
+            <li><a href="/team.html" class="active">Team</a></li>
+          </ul>
+        </nav>
+        <b>Social</b><br>
         <div class="social-row">
-          <a href="https://scholar.google.com/citations?hl=en&user=lq31WdEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
-          <a href="https://orcid.org/0000-0001-8772-7584"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a><br>
-          <a href="https://www.researchgate.net/profile/Qixiu-Cheng" class="author-social" target="_blank"><i class="ai ai-fw ai-researchgate-square"></i> ResearchGate</a><br>
-          <br>
+          <a href="https://scholar.google.com/citations?hl=en&user=lq31WdEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a>
+          <a href="https://orcid.org/0000-0001-8772-7584" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a>
+          <a href="https://www.researchgate.net/profile/Qixiu-Cheng" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-researchgate-square"></i> ResearchGate</a>
         </div>
-
-    <p><b>Contact:</b><br>Rm 2.06, 11-13 Tyndalls Park Road<br>Bristol BS8 1PY, UK<br>Email: qixiu[dot]kevin[dot]cheng[at]gmail[dot]com<br>qixiu[dot]cheng[at]bristol[dot]ac[dot]uk</p>
+        <p><b>Contact:</b><br>Rm 2.06, 11-13 Tyndalls Park Road<br>Bristol BS8 1PY, UK<br>Email: qixiu[dot]cheng[at]bristol[dot]ac[dot]uk<br>qixiu[dot]kevin[dot]cheng[at]gmail[dot]com</p>
+        <div class="visitor-counter">
+          <span id="visitor-count">Loading visitor count...</span>
+        </div>
       </header>
-	  
+
       <section>
-	<h2><a id="phdstudents" class="anchor" href="#phdstudents" aria-hidden="true"><span class="octicon octicon-link"></span></a>PhD Students</h2>
+        <h2><a id="phdstudents" class="anchor" href="#phdstudents" aria-hidden="true"><span class="octicon octicon-link"></span></a>PhD Students</h2>
         <ul>
-		  <li>Mr Jiazhen Li (Supported by University of Bristol Business School PhD Bursaries, 2025-2029, Co-supervised with Dr Ming Luo and Dr Sunil Tiwari)</li>
-		  <li>Ms Anqi Han (Supported by CSC-University of Bristol Joint PhD Scholarships, 2025-2029, Co-supervised with Dr Jie Zhang and Prof Gianluca Veronesi)</li>
+          <li>Mr Jiazhen Li (Supported by University of Bristol Business School PhD Bursaries, 2025-2029, Co-supervised with Dr Ming Luo and Dr Sunil Tiwari)</li>
+          <li>Ms Anqi Han (Supported by CSC-University of Bristol Joint PhD Scholarships, 2025-2029, Co-supervised with Dr Jie Zhang and Prof Gianluca Veronesi)</li>
         </ul>
-    <hr>
-	
-	<h2><a id="postdoc" class="anchor" href="#Postdoc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Postdoc and Visiting Students/Scholars</h2>
+        <hr>
+
+        <h2><a id="postdoc" class="anchor" href="#Postdoc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Postdoc and Visiting Students/Scholars</h2>
         <ul>
-		  <li>Ms Yuming Zhou, Visiting PhD Student (From Chang'an University), 2025-2026</li>
-		  <li>Ms Chenxiao Yu, Visiting PhD Student (From Tongji University), 2025-2026</li>
-		  <li>Ms Zhirong Zhang, Visiting PhD Student (From Chang'an University), 2024-2025</li>
-		  <li>Dr Ting Lu, Visiting Research Fellow (From Ningbo University), 2024-2025</li>
-		  <li>Dr Ruyang Yin, Postdoctoral Fellow (Supported by PolyU Postdoc Matching Fund Scheme), 2023</li>
+          <li>Ms Yuming Zhou, Visiting PhD Student (From Chang'an University), 2025-2026</li>
+          <li>Ms Chenxiao Yu, Visiting PhD Student (From Tongji University), 2025-2026</li>
+          <li>Ms Zhirong Zhang, Visiting PhD Student (From Chang'an University), 2024-2025</li>
+          <li>Dr Ting Lu, Visiting Research Fellow (From Ningbo University), 2024-2025</li>
+          <li>Dr Ruyang Yin, Postdoctoral Fellow (Supported by PolyU Postdoc Matching Fund Scheme), 2023</li>
         </ul>
-    <hr>
-	
+        <hr>
       </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/visitor-counter.js"></script>
   </body>
 </html>
-
-

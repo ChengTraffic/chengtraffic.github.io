@@ -1,196 +1,138 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Qixiu Cheng's Homepage</title>
-
+    <title>Professional Service — Qixiu Cheng</title>
+    <meta name="description" content="Professional services and memberships of Qixiu Cheng, including editorial board roles, conference committee memberships, and journal reviewing activities.">
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-29643011-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <!-- For all browsers -->
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.css"/>
-    
-    <style>
-      button.accordion {
-      font:16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color: #f8f8f8;
-      }
-      button.accordion.active, button.accordion:hover {
-      background-color: #f8f8f8;
-      }
-      button.accordion:after {
-      content: " [+] ";
-      font-size: 90%;
-      color:#777;
-      float: left;
-      margin-left: 1px;
-      }
-
-      button.accordion.active:after {
-      content: " [\2212] ";
-      }
-      div.panel {
-      padding: 0 20px;
-      margin-top: 5px;
-      display: none;
-      background-color: white;
-      font-size: 100%;
-      }
-      div.panel.show {
-      display: block !important;
-      }
-      .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-    </style>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1>Qixiu Cheng</h1>
         <p>Senior Lecturer in AI and Data Analytics<br>University of Bristol Business School<br>University of Bristol, Bristol, UK</p>
-		<h3><a href="https://chengtraffic.github.io/">Home</a></h3>
-        <h3><a href="https://chengtraffic.github.io/research.html">Research</a></h3>
-		<h3><a href="https://chengtraffic.github.io/teaching.html">Teaching</a></h3>
-		<h3><a href="https://chengtraffic.github.io/service.html">Service</a></h3>
-		<h3><a href="https://chengtraffic.github.io/award.html">Award</a></h3>
-		<h3><a href="https://chengtraffic.github.io/team.html">Team</a></h3>
-        
-    <b>Social</b><br>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/research.html">Research</a></li>
+            <li><a href="/teaching.html">Teaching</a></li>
+            <li><a href="/service.html" class="active">Service</a></li>
+            <li><a href="/award.html">Award</a></li>
+            <li><a href="/team.html">Team</a></li>
+          </ul>
+        </nav>
+        <b>Social</b><br>
         <div class="social-row">
-          <a href="https://scholar.google.com/citations?hl=en&user=lq31WdEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
-          <a href="https://orcid.org/0000-0001-8772-7584"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a><br>
-          <a href="https://www.researchgate.net/profile/Qixiu-Cheng" class="author-social" target="_blank"><i class="ai ai-fw ai-researchgate-square"></i> ResearchGate</a><br>
-          <br>
+          <a href="https://scholar.google.com/citations?hl=en&user=lq31WdEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a>
+          <a href="https://orcid.org/0000-0001-8772-7584" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a>
+          <a href="https://www.researchgate.net/profile/Qixiu-Cheng" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-researchgate-square"></i> ResearchGate</a>
         </div>
-
-    <p><b>Contact:</b><br>Rm 2.06, 11-13 Tyndalls Park Road<br>Bristol BS8 1PY, UK<br>Email: qixiu[dot]kevin[dot]cheng[at]gmail[dot]com<br>qixiu[dot]cheng[at]bristol[dot]ac[dot]uk</p>
+        <p><b>Contact:</b><br>Rm 2.06, 11-13 Tyndalls Park Road<br>Bristol BS8 1PY, UK<br>Email: qixiu[dot]cheng[at]bristol[dot]ac[dot]uk<br>qixiu[dot]kevin[dot]cheng[at]gmail[dot]com</p>
+        <div class="visitor-counter">
+          <span id="visitor-count">Loading visitor count...</span>
+        </div>
       </header>
-	  
+
       <section>
-	<h2><a id="membership" class="anchor" href="#membership" aria-hidden="true"><span class="octicon octicon-link"></span></a>Professional Services and Memberships</h2>
+        <h2><a id="membership" class="anchor" href="#membership" aria-hidden="true"><span class="octicon octicon-link"></span></a>Professional Services and Memberships</h2>
         <ul>
-		  <li>Associate Editor of <a href="https://www.aimspress.com/journal/urs">Urban Resilience and Sustainability</a></li>
-		  <li>Editorial Board Editor of <a href="https://www.sciencedirect.com/journal/transportation-research-part-e-logistics-and-transportation-review">Transportation Research Part E: Logistics and Transportation Review</a></li>
-		  <li>Editorial Board Editor of <a href="https://www.journals.elsevier.com/multimodal-transportation">Multimodal Transportation</a></li>
-		  <li>Editorial Board Editor of <a href="https://www.nature.com/srep/">Scientific Reports</a></li>
-		  <li>Academic Editor of <a href="https://www.hindawi.com/journals/ace/">Advances in Civil Engineering</a></li>
-		  <li>Youth Editorial Board Editor of <a href="https://www.sciencedirect.com/journal/communications-in-transportation-research">Communications in Transportation Research</a></li>
-		  <li>Youth Editorial Board Editor of <a href="https://www.sciencedirect.com/journal/engineering">Engineering</a></li>
+          <li>Associate Editor of <a href="https://www.aimspress.com/journal/urs">Urban Resilience and Sustainability</a></li>
+          <li>Editorial Board Editor of <a href="https://www.sciencedirect.com/journal/transportation-research-part-e-logistics-and-transportation-review">Transportation Research Part E: Logistics and Transportation Review</a></li>
+          <li>Editorial Board Editor of <a href="https://www.journals.elsevier.com/multimodal-transportation">Multimodal Transportation</a></li>
+          <li>Editorial Board Editor of <a href="https://www.nature.com/srep/">Scientific Reports</a></li>
+          <li>Academic Editor of <a href="https://www.hindawi.com/journals/ace/">Advances in Civil Engineering</a></li>
+          <li>Youth Editorial Board Editor of <a href="https://www.sciencedirect.com/journal/communications-in-transportation-research">Communications in Transportation Research</a></li>
+          <li>Youth Editorial Board Editor of <a href="https://www.sciencedirect.com/journal/engineering">Engineering</a></li>
         </ul>
-    <hr>
-	
-	<h2><a id="scientific-committee" class="anchor" href="#Scientific-Committee" aria-hidden="true"><span class="octicon octicon-link"></span></a>Committee Member for International Conferences</h2>
+        <hr>
+
+        <h2><a id="scientific-committee" class="anchor" href="#Scientific-Committee" aria-hidden="true"><span class="octicon octicon-link"></span></a>Committee Member for International Conferences</h2>
         <ul>
-		  <li>Academic Committee Member of the 23rd COTA International Conference for Transportation Professionals (CICTP2023), Beijing, China, 07/2023</li>
+          <li>Academic Committee Member of the 23rd COTA International Conference for Transportation Professionals (CICTP2023), Beijing, China, 07/2023</li>
           <li>Scientific Committee Member of the 4th International Symposium on Multimodal Transportation (ISMT), Nanjing, China, 12/2021</li>
         </ul>
-    <hr>
+        <hr>
 
-	<h2><a id="external-assessor" class="anchor" href="#External-Assessors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Appointment as External Assessors</h2>
+        <h2><a id="external-assessor" class="anchor" href="#External-Assessors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Appointment as External Assessors</h2>
         <ul>
-		  <li>Israel Science Foundation (ISF)</li>
-		  <li>University of Sydney Academic Promotions (Independent External Assessor)</li>
+          <li>Israel Science Foundation (ISF)</li>
+          <li>University of Sydney Academic Promotions (Independent External Assessor)</li>
         </ul>
-    <hr>
+        <hr>
 
-	<h2><a id="referee" class="anchor" href="#referee" aria-hidden="true"><span class="octicon octicon-link"></span></a>Referee for Academic Journals and Peer-reviewed Conferences</h2>
+        <h2><a id="referee" class="anchor" href="#referee" aria-hidden="true"><span class="octicon octicon-link"></span></a>Referee for Academic Journals and Peer-reviewed Conferences</h2>
         <ul>
-		  <li>Annual Meeting of Transportation Research Board</li>
-		  <li>Annual Meeting of COTA International Conference of Transportation Professionals</li>
-		  <li>Annual Meeting of World Transport Convention</li>
-		  <li>Annals of Operations Research</li>
-		  <li>Applied Sciences</li>
-		  <li>Big Data Research</li>
-		  <li>Case Studies on Transport Policy</li>
-		  <li>Cleaner Logistics and Supply Chain</li>
-		  <li>Communications in Transportation Research</li>
-		  <li>Discrete Dynamics in Nature and Society</li>
-		  <li>Energies</li>
-		  <li>Engineering Applications of Artificial Intelligence</li>
-		  <li>European Journal of Operational Research</li>
-		  <li>Frontiers in Future Transportation</li>
-		  <li>Frontiers in Sustainable Cities</li>
-		  <li>IEEE Intelligent Transportation Systems Magazine</li>
-		  <li>IEEE Internet of Things Journal</li>
-		  <li>IEEE Networking Letters</li>
-		  <li>IEEE Open Journal of Intelligent Transportation Systems</li>
-		  <li>IEEE Transactions on Big Data</li>
-		  <li>IEEE Transactions on Intelligent Transportation Systems</li>
-		  <li>IEEE Transactions on Knowledge and Data Engineering</li>
-		  <li>IEEE Transactions on Neural Networks and Learning Systems</li>
-		  <li>IEEE Transactions on Vehicular Technology</li>
-		  <li>IET Intelligent Transport Systems</li>
-		  <li>Industrial Management & Data Systems</li>
-		  <li>Information Fusion</li>
-		  <li>International Journal of Sustainable Transportation</li>
-		  <li>International Journal of Urban Sciences</li>
-		  <li>Journal of Advanced Transportation</li>
-		  <li>Journal of Cleaner Production</li>
-		  <li>Journal of Information and Organizational Sciences</li>
-		  <li>Journal of Intelligent Transportation Systems: Technology, Planning, and Operations</li>
-		  <li>Journal of Traffic and Transportation Engineering (English Edition)</li>
-		  <li>Journal of Transport Geography</li>
-		  <li>Journal of Transportation Engineering Part A: Systems</li>
-		  <li>KSCE Journal of Civil Engineering</li>
-		  <li>Maritime Policy & Management</li>
-		  <li>Multimodal Transportation</li>
-		  <li>Operational Research: An International Journal</li>
-		  <li>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</li>
-		  <li>Physica A: Statistical Mechanics and its Applications</li>
-		  <li>Plos One</li>
-		  <li>Renewable Energy</li>
-		  <li>Resources, Conservation & Recycling</li>
-		  <li>Scientific Reports</li>
-		  <li>Sustainability</li>
-		  <li>Sustainability Analytics and Modeling</li>
-		  <li>Sustainable and Resilient Infrastructure</li>
-		  <li>The Innovation</li>
-		  <li>Transport Policy</li>
-		  <li>Transportation Letters: The International Journal of Transportation Research</li>
-		  <li>Transportation Research Interdisciplinary Perspectives</li>
-		  <li>Transportation Research Part A: Policy and Practice</li>
-		  <li>Transportation Research Part B: Methodological</li>
-		  <li>Transportation Research Part C: Emerging Technologies</li>
-		  <li>Transportation Research Part D: Transport and Environment</li>
-		  <li>Transportation Research Part E: Logistics and Transportation Review</li>
-		  <li>Transportation Research Record: Journal of the Transportation Research Board</li>
-		  <li>Transportation Science</li>
-		  <li>Transportmetrica A: Transport Science</li>
-		  <li>Transportmetrica B: Transport Dynamics</li>
-		  <li>Travel Behaviour and Society</li>
-		  <li>Utilities Policy</li>
+          <li>Annual Meeting of Transportation Research Board</li>
+          <li>Annual Meeting of COTA International Conference of Transportation Professionals</li>
+          <li>Annual Meeting of World Transport Convention</li>
+          <li>Annals of Operations Research</li>
+          <li>Applied Sciences</li>
+          <li>Big Data Research</li>
+          <li>Case Studies on Transport Policy</li>
+          <li>Cleaner Logistics and Supply Chain</li>
+          <li>Communications in Transportation Research</li>
+          <li>Discrete Dynamics in Nature and Society</li>
+          <li>Energies</li>
+          <li>Engineering Applications of Artificial Intelligence</li>
+          <li>European Journal of Operational Research</li>
+          <li>Frontiers in Future Transportation</li>
+          <li>Frontiers in Sustainable Cities</li>
+          <li>IEEE Intelligent Transportation Systems Magazine</li>
+          <li>IEEE Internet of Things Journal</li>
+          <li>IEEE Networking Letters</li>
+          <li>IEEE Open Journal of Intelligent Transportation Systems</li>
+          <li>IEEE Transactions on Big Data</li>
+          <li>IEEE Transactions on Intelligent Transportation Systems</li>
+          <li>IEEE Transactions on Knowledge and Data Engineering</li>
+          <li>IEEE Transactions on Neural Networks and Learning Systems</li>
+          <li>IEEE Transactions on Vehicular Technology</li>
+          <li>IET Intelligent Transport Systems</li>
+          <li>Industrial Management &amp; Data Systems</li>
+          <li>Information Fusion</li>
+          <li>International Journal of Sustainable Transportation</li>
+          <li>International Journal of Urban Sciences</li>
+          <li>Journal of Advanced Transportation</li>
+          <li>Journal of Cleaner Production</li>
+          <li>Journal of Information and Organizational Sciences</li>
+          <li>Journal of Intelligent Transportation Systems: Technology, Planning, and Operations</li>
+          <li>Journal of Traffic and Transportation Engineering (English Edition)</li>
+          <li>Journal of Transport Geography</li>
+          <li>Journal of Transportation Engineering Part A: Systems</li>
+          <li>KSCE Journal of Civil Engineering</li>
+          <li>Maritime Policy &amp; Management</li>
+          <li>Multimodal Transportation</li>
+          <li>Operational Research: An International Journal</li>
+          <li>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</li>
+          <li>Physica A: Statistical Mechanics and its Applications</li>
+          <li>Plos One</li>
+          <li>Renewable Energy</li>
+          <li>Resources, Conservation &amp; Recycling</li>
+          <li>Scientific Reports</li>
+          <li>Sustainability</li>
+          <li>Sustainability Analytics and Modeling</li>
+          <li>Sustainable and Resilient Infrastructure</li>
+          <li>The Innovation</li>
+          <li>Transport Policy</li>
+          <li>Transportation Letters: The International Journal of Transportation Research</li>
+          <li>Transportation Research Interdisciplinary Perspectives</li>
+          <li>Transportation Research Part A: Policy and Practice</li>
+          <li>Transportation Research Part B: Methodological</li>
+          <li>Transportation Research Part C: Emerging Technologies</li>
+          <li>Transportation Research Part D: Transport and Environment</li>
+          <li>Transportation Research Part E: Logistics and Transportation Review</li>
+          <li>Transportation Research Record: Journal of the Transportation Research Board</li>
+          <li>Transportation Science</li>
+          <li>Transportmetrica A: Transport Science</li>
+          <li>Transportmetrica B: Transport Dynamics</li>
+          <li>Travel Behaviour and Society</li>
+          <li>Utilities Policy</li>
         </ul>
-	
       </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/visitor-counter.js"></script>
   </body>
 </html>
-
-

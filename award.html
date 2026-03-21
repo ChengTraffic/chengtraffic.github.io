@@ -1,135 +1,77 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Qixiu Cheng's Homepage</title>
-
+    <title>Awards &amp; Grants — Qixiu Cheng</title>
+    <meta name="description" content="Honors, awards, and research grants of Qixiu Cheng, including grants from the Royal Society, University of Bristol, and Hong Kong Polytechnic University.">
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-29643011-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <!-- For all browsers -->
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.css"/>
-    
-    <style>
-      button.accordion {
-      font:16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color: #f8f8f8;
-      }
-      button.accordion.active, button.accordion:hover {
-      background-color: #f8f8f8;
-      }
-      button.accordion:after {
-      content: " [+] ";
-      font-size: 90%;
-      color:#777;
-      float: left;
-      margin-left: 1px;
-      }
-
-      button.accordion.active:after {
-      content: " [\2212] ";
-      }
-      div.panel {
-      padding: 0 20px;
-      margin-top: 5px;
-      display: none;
-      background-color: white;
-      font-size: 100%;
-      }
-      div.panel.show {
-      display: block !important;
-      }
-      .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-    </style>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1>Qixiu Cheng</h1>
         <p>Senior Lecturer in AI and Data Analytics<br>University of Bristol Business School<br>University of Bristol, Bristol, UK</p>
-		<h3><a href="https://chengtraffic.github.io/">Home</a></h3>
-        <h3><a href="https://chengtraffic.github.io/research.html">Research</a></h3>
-		<h3><a href="https://chengtraffic.github.io/teaching.html">Teaching</a></h3>
-		<h3><a href="https://chengtraffic.github.io/service.html">Service</a></h3>
-		<h3><a href="https://chengtraffic.github.io/award.html">Award</a></h3>
-		<h3><a href="https://chengtraffic.github.io/team.html">Team</a></h3>
-        
-    <b>Social</b><br>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/research.html">Research</a></li>
+            <li><a href="/teaching.html">Teaching</a></li>
+            <li><a href="/service.html">Service</a></li>
+            <li><a href="/award.html" class="active">Award</a></li>
+            <li><a href="/team.html">Team</a></li>
+          </ul>
+        </nav>
+        <b>Social</b><br>
         <div class="social-row">
-          <a href="https://scholar.google.com/citations?hl=en&user=lq31WdEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
-          <a href="https://orcid.org/0000-0001-8772-7584"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a><br>
-          <a href="https://www.researchgate.net/profile/Qixiu-Cheng" class="author-social" target="_blank"><i class="ai ai-fw ai-researchgate-square"></i> ResearchGate</a><br>
-          <br>
+          <a href="https://scholar.google.com/citations?hl=en&user=lq31WdEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a>
+          <a href="https://orcid.org/0000-0001-8772-7584" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a>
+          <a href="https://www.researchgate.net/profile/Qixiu-Cheng" target="_blank" rel="noopener noreferrer"><i class="ai ai-fw ai-researchgate-square"></i> ResearchGate</a>
         </div>
-
-    <p><b>Contact:</b><br>Rm 2.06, 11-13 Tyndalls Park Road<br>Bristol BS8 1PY, UK<br>Email: qixiu[dot]kevin[dot]cheng[at]gmail[dot]com<br>qixiu[dot]cheng[at]bristol[dot]ac[dot]uk</p>
+        <p><b>Contact:</b><br>Rm 2.06, 11-13 Tyndalls Park Road<br>Bristol BS8 1PY, UK<br>Email: qixiu[dot]cheng[at]bristol[dot]ac[dot]uk<br>qixiu[dot]kevin[dot]cheng[at]gmail[dot]com</p>
+        <div class="visitor-counter">
+          <span id="visitor-count">Loading visitor count...</span>
+        </div>
       </header>
-	  
+
       <section>
-
-  <h2>Honors and Awards</h2>
+        <h2>Honors and Awards</h2>
         <ul>
-		  <li>Outstanding Editor Award of Multimodal Transportation, 2025.</li>
-		  <li>Outstanding Lecturer in OMSHI Academic Group (Joint Second Place), Dean’s Award for Education, University of Bristol Business School, 2024.</li>
-		  <li>Best Doctoral Dissertation Award of the 14th International Workshop on Computational Transportation Science (CTS 2023), 2023.</li>
-    	  <li>Best Academic Report Award of the 11th Transportation Research Forum (Shanghai), 2022.</li>
-		  <li>Best Paper Award of Multimodal Transportation, 2022.</li>
-		  <li>Outstanding Reviewer Award of Multimodal Transportation, 2022.</li>
-		  <li>Outstanding Submittal Award of “TRB 2017 Transportation Data Analytics Contest”, Awarded by TRB Effects of Information and Communication Technologies on Travel Choices Committee, 2017.</li>
-		  <li>Best Paper Award of the 2nd Transportation Research Congress, 2017.</li>
-		</ul>
-    <hr>
+          <li>Outstanding Editor Award of Multimodal Transportation, 2025.</li>
+          <li>Outstanding Lecturer in OMSHI Academic Group (Joint Second Place), Dean's Award for Education, University of Bristol Business School, 2024.</li>
+          <li>Best Doctoral Dissertation Award of the 14th International Workshop on Computational Transportation Science (CTS 2023), 2023.</li>
+          <li>Best Academic Report Award of the 11th Transportation Research Forum (Shanghai), 2022.</li>
+          <li>Best Paper Award of Multimodal Transportation, 2022.</li>
+          <li>Outstanding Reviewer Award of Multimodal Transportation, 2022.</li>
+          <li>Outstanding Submittal Award of "TRB 2017 Transportation Data Analytics Contest", Awarded by TRB Effects of Information and Communication Technologies on Travel Choices Committee, 2017.</li>
+          <li>Best Paper Award of the 2nd Transportation Research Congress, 2017.</li>
+        </ul>
+        <hr>
 
-  <h2>Research Grants</h2>
+        <h2>Research Grants</h2>
         <ul>
-		  <li>University of Bristol Business School General Research Fund. <strong>Principal Investigator.</strong> 07/2025. Award Amount: £3.2k.</li>
-		  <li>The Royal Society Research Grant. <strong>Principal Investigator.</strong> Project Title: Beyond Real Data: Quantifying and Addressing Risks of Partial AI-Generated Data in LLM Training for Autonomous Systems. 03/2025-02/2026. Award Amount: £26.56k.</li>
-		  <li>The Royal Society International Exchanges Scheme (Cost Share Programme). <strong>Co-Investigator.</strong> Project Title: A Comprehensive Maintenance Strategy for EV Powertrains: Addressing High-Frequency Vibration Impacts and Leveraging Machine Learning for Worst-Case Scenario Detection. 01/2025-12/2026. Award Amount: £11.2k.</li>
-		  <li>University of Bristol FSSL Strategic Research Fund (Seedcorn Funding). <strong>Principal Investigator.</strong> Project Title: Enabling future mobility: Predicting spatiotemporal travel demand for urban flying taxis. 03/2024-07/2024. Award Amount: £2.5k.</li>
-		  <li>Departmental General Research Fund of The Hong Kong Polytechnic University. <strong>Principal Investigator.</strong> Project Title: Travel time reliability analysis with a frequency domain decomposition approach. 02/2023-01/2024. Award Amount: HKD $64k.</li>
-		  <li>Guangdong Basic and Applied Basic Research Fund. <strong>Principal Investigator.</strong> Project Title: Day-to-day dynamics with mixed traffic flow considering autonomous vehicles. 10/2022-09/2025. Award Amount: RMB ¥100k.</li>
-		  <li>Start-up Fund for RAPs under the Strategic Hiring Scheme of The Hong Kong Polytechnic University. <strong>Principal Investigator.</strong> Project Title: Stochastic fundamental diagram and freeway capacity: Model formulation, parameter calibration, and potential applications. 06/2022-06/2024. Award Amount: HKD $250k.</li>
-		  <li>Graduate Scientific Research Innovation Project of Jiangsu Province. <strong>Principal Investigator.</strong> Project Title: Day-to-day Dynamic Flow Evolution Process for Multimodal Transport Network. 04/2017-12/2020. Award Amount: RMB ¥30k.</li>
-	      <li>Scientific Research Foundation of Graduate School of Southeast University. <strong>Principal Investigator.</strong> Project Title: Dynamic traffic assignment and its application in urban congestion pricing. 10/2018-12/2020. Award Amount: RMB ¥42k.</li>
-		</ul>
+          <li>University of Bristol Business School General Research Fund. <strong>Principal Investigator.</strong> 07/2025. Award Amount: &pound;3.2k.</li>
+          <li>The Royal Society Research Grant. <strong>Principal Investigator.</strong> Project Title: Beyond Real Data: Quantifying and Addressing Risks of Partial AI-Generated Data in LLM Training for Autonomous Systems. 03/2025-02/2026. Award Amount: &pound;26.56k.</li>
+          <li>The Royal Society International Exchanges Scheme (Cost Share Programme). <strong>Co-Investigator.</strong> Project Title: A Comprehensive Maintenance Strategy for EV Powertrains: Addressing High-Frequency Vibration Impacts and Leveraging Machine Learning for Worst-Case Scenario Detection. 01/2025-12/2026. Award Amount: &pound;11.2k.</li>
+          <li>University of Bristol FSSL Strategic Research Fund (Seedcorn Funding). <strong>Principal Investigator.</strong> Project Title: Enabling future mobility: Predicting spatiotemporal travel demand for urban flying taxis. 03/2024-07/2024. Award Amount: &pound;2.5k.</li>
+          <li>Departmental General Research Fund of The Hong Kong Polytechnic University. <strong>Principal Investigator.</strong> Project Title: Travel time reliability analysis with a frequency domain decomposition approach. 02/2023-01/2024. Award Amount: HKD $64k.</li>
+          <li>Guangdong Basic and Applied Basic Research Fund. <strong>Principal Investigator.</strong> Project Title: Day-to-day dynamics with mixed traffic flow considering autonomous vehicles. 10/2022-09/2025. Award Amount: RMB &yen;100k.</li>
+          <li>Start-up Fund for RAPs under the Strategic Hiring Scheme of The Hong Kong Polytechnic University. <strong>Principal Investigator.</strong> Project Title: Stochastic fundamental diagram and freeway capacity: Model formulation, parameter calibration, and potential applications. 06/2022-06/2024. Award Amount: HKD $250k.</li>
+          <li>Graduate Scientific Research Innovation Project of Jiangsu Province. <strong>Principal Investigator.</strong> Project Title: Day-to-day Dynamic Flow Evolution Process for Multimodal Transport Network. 04/2017-12/2020. Award Amount: RMB &yen;30k.</li>
+          <li>Scientific Research Foundation of Graduate School of Southeast University. <strong>Principal Investigator.</strong> Project Title: Dynamic traffic assignment and its application in urban congestion pricing. 10/2018-12/2020. Award Amount: RMB &yen;42k.</li>
+        </ul>
       </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    <script> 
+    <script src="javascripts/visitor-counter.js"></script>
+    <script>
     var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].onclick = function(){
-            this.classList.toggle("active");
-            this.parentNode.nextElementSibling.classList.toggle("show");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.parentNode.nextElementSibling.classList.toggle("show");
       }
     }
     </script>
