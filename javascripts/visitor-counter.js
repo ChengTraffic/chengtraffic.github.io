@@ -1,60 +1,74 @@
 /**
  * Visitor Counter for chengtraffic.github.io
- * Uses hitscounter.dev (open-source hit counter service) to track page views.
- * Displays total visitor count since March 21, 2026.
+ * Uses hitscounter.dev to track and display page views.
+ *
+ * hitscounter.dev API returns an SVG badge containing:
+ *   [Icon] [Label] [Today count / Total count]
+ *
+ * We fetch the SVG, parse out the total count, and display it
+ * as "You are the Nth visitor since March 21, 2026".
+ *
+ * If parsing fails, we fall back to showing the badge image directly.
  */
-(function() {
+(function () {
   var el = document.getElementById('visitor-count');
   if (!el) return;
 
-  // Use the site-wide counter URL (counts all pages together)
-  var counterUrl = 'https://hitscounter.dev/api/hit/'
-    + encodeURIComponent('https://chengtraffic.github.io')
-    + '/json';
+  var siteUrl = encodeURIComponent('https://chengtraffic.github.io');
+  var badgeUrl = 'https://hitscounter.dev/api/hit'
+    + '?url=' + siteUrl
+    + '&label=Visitors'
+    + '&icon=eye'
+    + '&color=%23198754'
+    + '&style=flat';
 
-  // Fallback: use the SVG badge approach which is more widely supported
-  var badgeUrl = 'https://hitscounter.dev/api/hit/'
-    + encodeURIComponent('https://chengtraffic.github.io')
-    + '/svg';
-
-  // Try fetching the count
   fetch(badgeUrl)
-    .then(function(response) {
-      return response.text();
-    })
-    .then(function(svgText) {
-      // Extract the total count from the SVG badge
-      // The SVG contains text elements with the count
-      var matches = svgText.match(/>(\d+)<\/text>/g);
-      if (matches && matches.length > 0) {
-        // Get the last number found (usually the total count)
-        var lastMatch = matches[matches.length - 1];
-        var count = lastMatch.match(/(\d+)/);
-        if (count) {
-          el.textContent = 'You are the ' + ordinal(parseInt(count[1], 10))
+    .then(function (res) { return res.text(); })
+    .then(function (svg) {
+      // The SVG badge text looks like "today / total"
+      // We want the total (the number after the slash)
+      // Match patterns like ">123 / 4567<" inside the SVG
+      var slashMatch = svg.match(/>\s*(\d[\d,]*)\s*\/\s*(\d[\d,]*)\s*</);
+      if (slashMatch) {
+        var total = parseInt(slashMatch[2].replace(/,/g, ''), 10);
+        if (!isNaN(total) && total > 0) {
+          el.textContent = 'You are the ' + ordinal(total)
             + ' visitor since March 21, 2026';
           return;
         }
       }
-      // If SVG parsing fails, show the badge as an image instead
-      showBadgeFallback(el);
+
+      // Fallback: try to find any number in the SVG
+      var nums = [];
+      var re = />(\d[\d,]*)</g;
+      var m;
+      while ((m = re.exec(svg)) !== null) {
+        nums.push(parseInt(m[1].replace(/,/g, ''), 10));
+      }
+      if (nums.length > 0) {
+        // The largest number is most likely the total count
+        var total = Math.max.apply(null, nums);
+        el.textContent = 'You are the ' + ordinal(total)
+          + ' visitor since March 21, 2026';
+        return;
+      }
+
+      // If all parsing fails, show the badge image
+      showBadge(el);
     })
-    .catch(function() {
-      // On network error, show the badge image as fallback
-      showBadgeFallback(el);
+    .catch(function () {
+      showBadge(el);
     });
 
-  function showBadgeFallback(element) {
+  function showBadge(element) {
     var img = document.createElement('img');
-    img.src = 'https://hitscounter.dev/api/hit/'
-      + encodeURIComponent('https://chengtraffic.github.io')
-      + '/svg?label=Visitors%20since%202026.3.21';
+    img.src = badgeUrl;
     img.alt = 'Visitor Count';
-    img.style.height = '20px';
+    img.style.height = '22px';
     img.style.verticalAlign = 'middle';
     element.textContent = '';
     element.appendChild(img);
-    var text = document.createTextNode(' visitors since March 21, 2026');
+    var text = document.createTextNode(' since March 21, 2026');
     element.appendChild(text);
   }
 
