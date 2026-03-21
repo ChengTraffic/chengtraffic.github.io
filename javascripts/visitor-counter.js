@@ -1,22 +1,25 @@
 /**
  * Visitor Counter for chengtraffic.github.io
  *
- * Uses hitscounter.dev to track unique visits (not page views).
+ * Performance strategy:
+ *   1. Instantly display the last known count from localStorage (< 1ms).
+ *   2. If this is the first page load in the session, fetch from the API
+ *      to increment (+1) and get the fresh total. Save to both
+ *      sessionStorage (prevents re-increment) and localStorage (fast
+ *      display on next visit).
+ *   3. If already counted this session, skip the API call entirely.
  *
- * Logic:
- *   - On first page load in a session, fetch the increment API → count +1.
- *   - Store the returned count in sessionStorage.
- *   - On subsequent navigations within the same session, display the
- *     cached count without calling the API again.
- *   - This way, one visitor = one count, regardless of how many pages
- *     they browse.
+ * Net result: the number appears immediately on every page load; the
+ * API is only called once per visitor session.
  */
 (function () {
   var el = document.getElementById('visitor-count');
   if (!el) return;
 
-  var STORAGE_KEY = 'qc_visitor_total';
-  var siteUrl = encodeURIComponent('https://chengtraffic.github.io');
+  var SESSION_KEY = 'qc_visitor_total';
+  var LOCAL_KEY   = 'qc_visitor_total_cache';
+
+  var siteUrl  = encodeURIComponent('https://chengtraffic.github.io');
   var badgeUrl = 'https://hitscounter.dev/api/hit'
     + '?url=' + siteUrl
     + '&label=Visitors'
@@ -24,54 +27,49 @@
     + '&color=%23198754'
     + '&style=flat';
 
-  // Check if we already counted this session
-  var cached = null;
-  try { cached = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+  // ---------- Step 1: instant display from cache ----------
+  var localCache = safeGet(localStorage, LOCAL_KEY);
+  var sessionCache = safeGet(sessionStorage, SESSION_KEY);
 
-  if (cached) {
-    // Already counted this session — just display
-    display(parseInt(cached, 10));
-  } else {
-    // First visit this session — call the API to increment
-    fetch(badgeUrl)
-      .then(function (res) { return res.text(); })
-      .then(function (svg) {
-        var total = parseTotalFromSvg(svg);
-        if (total > 0) {
-          try { sessionStorage.setItem(STORAGE_KEY, String(total)); } catch (e) {}
-          display(total);
-        } else {
-          showBadge();
-        }
-      })
-      .catch(function () {
-        showBadge();
-      });
+  if (sessionCache) {
+    // Already counted this session — show cached value, done
+    display(parseInt(sessionCache, 10));
+    return;
   }
 
-  /**
-   * Parse the total hit count from the SVG badge text.
-   * The badge shows "today / total" — we want the total.
-   */
+  if (localCache) {
+    // Show stale value immediately while we fetch the fresh one
+    display(parseInt(localCache, 10));
+  }
+
+  // ---------- Step 2: fetch fresh count (once per session) ----------
+  fetch(badgeUrl)
+    .then(function (res) { return res.text(); })
+    .then(function (svg) {
+      var total = parseTotalFromSvg(svg);
+      if (total > 0) {
+        safeSet(sessionStorage, SESSION_KEY, String(total));
+        safeSet(localStorage, LOCAL_KEY, String(total));
+        display(total);
+      } else if (!localCache) {
+        showBadge();
+      }
+    })
+    .catch(function () {
+      if (!localCache) showBadge();
+    });
+
+  // ---------- helpers ----------
+
   function parseTotalFromSvg(svg) {
-    // Pattern 1: "today / total" format
-    var slashMatch = svg.match(/>\s*(\d[\d,]*)\s*\/\s*(\d[\d,]*)\s*</);
-    if (slashMatch) {
-      return parseInt(slashMatch[2].replace(/,/g, ''), 10);
-    }
-
-    // Pattern 2: grab all numbers, take the largest
-    var nums = [];
-    var re = />(\d[\d,]*)</g;
-    var m;
-    while ((m = re.exec(svg)) !== null) {
-      nums.push(parseInt(m[1].replace(/,/g, ''), 10));
-    }
-    if (nums.length > 0) {
-      return Math.max.apply(null, nums);
-    }
-
-    return 0;
+    // "today / total" format
+    var m = svg.match(/>\s*(\d[\d,]*)\s*\/\s*(\d[\d,]*)\s*</);
+    if (m) return parseInt(m[2].replace(/,/g, ''), 10);
+    // fallback: largest number in the SVG
+    var nums = [], re = />(\d[\d,]*)</g, r;
+    while ((r = re.exec(svg)) !== null)
+      nums.push(parseInt(r[1].replace(/,/g, ''), 10));
+    return nums.length ? Math.max.apply(null, nums) : 0;
   }
 
   function display(n) {
@@ -81,20 +79,26 @@
   }
 
   function showBadge() {
+    el.textContent = '';
     var img = document.createElement('img');
     img.src = badgeUrl;
     img.alt = 'Visitor Count';
     img.style.height = '22px';
     img.style.verticalAlign = 'middle';
-    el.textContent = '';
     el.appendChild(img);
-    var text = document.createTextNode(' since March 21, 2026');
-    el.appendChild(text);
+    el.appendChild(document.createTextNode(' since March 21, 2026'));
   }
 
   function ordinal(n) {
     var s = ['th', 'st', 'nd', 'rd'];
     var v = n % 100;
     return n + (s[(v - 20) % 10] || s[v] || s[0]);
+  }
+
+  function safeGet(storage, key) {
+    try { return storage.getItem(key); } catch (e) { return null; }
+  }
+  function safeSet(storage, key, val) {
+    try { storage.setItem(key, val); } catch (e) {}
   }
 })();
