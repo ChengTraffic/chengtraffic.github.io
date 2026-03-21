@@ -1,19 +1,21 @@
 /**
  * Visitor Counter for chengtraffic.github.io
- * Uses hitscounter.dev to track and display page views.
  *
- * hitscounter.dev API returns an SVG badge containing:
- *   [Icon] [Label] [Today count / Total count]
+ * Uses hitscounter.dev to track unique visits (not page views).
  *
- * We fetch the SVG, parse out the total count, and display it
- * as "You are the Nth visitor since March 21, 2026".
- *
- * If parsing fails, we fall back to showing the badge image directly.
+ * Logic:
+ *   - On first page load in a session, fetch the increment API → count +1.
+ *   - Store the returned count in sessionStorage.
+ *   - On subsequent navigations within the same session, display the
+ *     cached count without calling the API again.
+ *   - This way, one visitor = one count, regardless of how many pages
+ *     they browse.
  */
 (function () {
   var el = document.getElementById('visitor-count');
   if (!el) return;
 
+  var STORAGE_KEY = 'qc_visitor_total';
   var siteUrl = encodeURIComponent('https://chengtraffic.github.io');
   var badgeUrl = 'https://hitscounter.dev/api/hit'
     + '?url=' + siteUrl
@@ -22,54 +24,72 @@
     + '&color=%23198754'
     + '&style=flat';
 
-  fetch(badgeUrl)
-    .then(function (res) { return res.text(); })
-    .then(function (svg) {
-      // The SVG badge text looks like "today / total"
-      // We want the total (the number after the slash)
-      // Match patterns like ">123 / 4567<" inside the SVG
-      var slashMatch = svg.match(/>\s*(\d[\d,]*)\s*\/\s*(\d[\d,]*)\s*</);
-      if (slashMatch) {
-        var total = parseInt(slashMatch[2].replace(/,/g, ''), 10);
-        if (!isNaN(total) && total > 0) {
-          el.textContent = 'You are the ' + ordinal(total)
-            + ' visitor since March 21, 2026';
-          return;
+  // Check if we already counted this session
+  var cached = null;
+  try { cached = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+
+  if (cached) {
+    // Already counted this session — just display
+    display(parseInt(cached, 10));
+  } else {
+    // First visit this session — call the API to increment
+    fetch(badgeUrl)
+      .then(function (res) { return res.text(); })
+      .then(function (svg) {
+        var total = parseTotalFromSvg(svg);
+        if (total > 0) {
+          try { sessionStorage.setItem(STORAGE_KEY, String(total)); } catch (e) {}
+          display(total);
+        } else {
+          showBadge();
         }
-      }
+      })
+      .catch(function () {
+        showBadge();
+      });
+  }
 
-      // Fallback: try to find any number in the SVG
-      var nums = [];
-      var re = />(\d[\d,]*)</g;
-      var m;
-      while ((m = re.exec(svg)) !== null) {
-        nums.push(parseInt(m[1].replace(/,/g, ''), 10));
-      }
-      if (nums.length > 0) {
-        // The largest number is most likely the total count
-        var total = Math.max.apply(null, nums);
-        el.textContent = 'You are the ' + ordinal(total)
-          + ' visitor since March 21, 2026';
-        return;
-      }
+  /**
+   * Parse the total hit count from the SVG badge text.
+   * The badge shows "today / total" — we want the total.
+   */
+  function parseTotalFromSvg(svg) {
+    // Pattern 1: "today / total" format
+    var slashMatch = svg.match(/>\s*(\d[\d,]*)\s*\/\s*(\d[\d,]*)\s*</);
+    if (slashMatch) {
+      return parseInt(slashMatch[2].replace(/,/g, ''), 10);
+    }
 
-      // If all parsing fails, show the badge image
-      showBadge(el);
-    })
-    .catch(function () {
-      showBadge(el);
-    });
+    // Pattern 2: grab all numbers, take the largest
+    var nums = [];
+    var re = />(\d[\d,]*)</g;
+    var m;
+    while ((m = re.exec(svg)) !== null) {
+      nums.push(parseInt(m[1].replace(/,/g, ''), 10));
+    }
+    if (nums.length > 0) {
+      return Math.max.apply(null, nums);
+    }
 
-  function showBadge(element) {
+    return 0;
+  }
+
+  function display(n) {
+    if (!n || n <= 0) { showBadge(); return; }
+    el.textContent = 'You are the ' + ordinal(n)
+      + ' visitor since March 21, 2026';
+  }
+
+  function showBadge() {
     var img = document.createElement('img');
     img.src = badgeUrl;
     img.alt = 'Visitor Count';
     img.style.height = '22px';
     img.style.verticalAlign = 'middle';
-    element.textContent = '';
-    element.appendChild(img);
+    el.textContent = '';
+    el.appendChild(img);
     var text = document.createTextNode(' since March 21, 2026');
-    element.appendChild(text);
+    el.appendChild(text);
   }
 
   function ordinal(n) {
